@@ -1,0 +1,235 @@
+@media (max-width: 1024px) {
+  .timeline__track {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    padding-top: 0;
+    padding-left: 3rem;
+  }
+
+  .timeline__track::before {
+    top: 0;
+    bottom: 0;
+    left: 0.55rem;
+    right: auto;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(
+      180deg,
+      rgba(78, 107, 255, 0.1),
+      rgba(78, 107, 255, 0.65),
+      rgba(78, 107, 255, 0.1)
+    );
+  }
+
+  .timeline__step {
+    min-height: 0;
+  }
+
+  .timeline__checkpoint {
+    top: var(--space-lg);
+    left: -3rem;
+    transform: none;
+    justify-items: center;
+    width: 18px;
+  }
+
+  .timeline__checkpoint-year {
+    position: absolute;
+    top: calc(100% + 0.55rem);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .skills__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav__list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--color-bg-light);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xl);
+    transition: right var(--transition-normal);
+    z-index: 90;
+  }
+
+  .nav__list.active {
+    right: 0;
+  }
+
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__toggle.active .nav__toggle-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav__toggle.active .nav__toggle-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav__toggle.active .nav__toggle-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    text-align: center;
+  }
+
+  .hero__content {
+    align-items: center;
+    padding: 0 var(--space-sm);
+  }
+
+  .hero__text {
+    max-width: 100%;
+  }
+
+  .hero__cta {
+    align-self: center;
+  }
+
+  .hero__image {
+    order: -1;
+    padding: 0 var(--space-sm);
+  }
+
+  .hero__img {
+    margin: 0 auto;
+  }
+
+  .timeline__header {
+    margin-bottom: var(--space-md);
+  }
+
+  .projects__carousel-container {
+    margin: 0 var(--space-sm);
+  }
+
+  .projects__carousel-item {
+    flex: 0 0 280px;
+    min-width: 280px;
+  }
+
+  .projects__carousel-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .projects__carousel-btn--prev {
+    left: var(--space-sm);
+  }
+
+  .projects__carousel-btn--next {
+    right: var(--space-sm);
+  }
+
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .skills__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    max-width: 100%;
+  }
+
+  .skills__category-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skills__category-badge {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .skills__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .skills__item {
+    padding: var(--space-lg);
+  }
+
+  .skills__row {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+  }
+
+  .timeline__item {
+    padding: var(--space-lg);
+  }
+
+  .timeline__subtitle {
+    font-size: 0.9rem;
+  }
+
+  .timeline__description,
+  .timeline__point {
+    font-size: 0.94rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --space-md: 0.75rem;
+    --space-lg: 1rem;
+    --space-xl: 1.5rem;
+    --space-xxl: 2rem;
+  }
+
+  body {
+    padding: 0 var(--space-sm);
+  }
+
+  .footer__content {
+    flex-direction: column;
+  }
+
+  .stats__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__carousel-item {
+    flex: 0 0 250px;
+    min-width: 250px;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .nav__link {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .projects__carousel-btn {
+    width: 56px;
+    height: 56px;
+  }
+
+  .hero__cta {
+    padding: var(--space-md) var(--space-xl);
+  }
+}
